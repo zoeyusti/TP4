@@ -1,5 +1,50 @@
 extends layout
 
 block content
-  h1= title
-  p Welcome to #{title}
+    .tituloEnc
+        h1 Encuesta de tecnología
+
+    form.formEncuesta
+        ul
+        li
+            label(for='name') Nombre
+            input(type='text' name='name' maxlength='25')
+            span Escribe tu nombre
+        li
+            label(for='pais') Pais de Residencia
+            select#idComboBox(name='comboBox')
+                option(value='') 1
+                option(value='') 2
+                option(value='') 3
+                option(value='') 4
+                option(value='') 5
+                option(value='') 6
+                option(value='') Other
+            span Elige tu País
+        li
+            label(for='lenguaje') ¿Cual es tu lenguaje Preferido?
+            .modulo1
+            input(type='radio' name='lenguaje' value='js')
+            p JavaScript
+            input(type='radio' name='lenguaje' value='JAVA')
+            p JAVA
+            input(type='radio' name='lenguaje' value='CSharp')
+            p C#
+            span Elige tu lenguaje de programacion.
+        li
+            label(for='lenguaje') ¿Cual es tu Sistema Operativo Preferido?
+            .modulo1
+            input(type='radio' name='SO' value='w2')
+            p Windows  
+            input(type='radio' name='SO' value='lx')
+            p Linux  
+            input(type='radio' name='SO' value='so')
+            p Solaris  
+            span Elige Sistema Operativo Predilecto.
+        li
+            label(for='bio') Algo que quieras comentarnos?
+            textarea(name='bio' onkeyup='adjust_textarea(this)')
+            span Escribe algo bonitoooo~ 
+        li
+            input(type='submit' value='Enviar')
+
