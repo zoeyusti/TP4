@@ -22,7 +22,7 @@ block content
                 option(value='') Other
             span Elige tu País
         li
-            label(for='lenguaje') ¿Cual es tu lenguaje Preferido?
+            label(for='lenguaje') ¿Cuál es tu Lenguaje Preferido?
             .modulo1
             input(type='radio' name='lenguaje' value='js')
             p JavaScript
@@ -32,7 +32,7 @@ block content
             p C#
             span Elige tu lenguaje de programacion.
         li
-            label(for='lenguaje') ¿Cual es tu Sistema Operativo Preferido?
+            label(for='SO') ¿Cuál es tu Sistema Operativo Preferido?
             .modulo1
             input(type='radio' name='SO' value='w2')
             p Windows  
@@ -40,7 +40,27 @@ block content
             p Linux  
             input(type='radio' name='SO' value='so')
             p Solaris  
-            span Elige Sistema Operativo Predilecto.
+            span Elige tu Sistema Operativo Predilecto.
+        li
+            label(for='editor') ¿Cual es tu Editor de Texto Preferido?
+            .modulo1
+            input(type='radio' name='editor' value='sublime')
+            p Sublime text
+            input(type='radio' name='editor' value='notepad')
+            p Notepad++  
+            input(type='radio' name='editor' value='atom')
+            p Atom  
+            span Elige tu Editor de Texto.
+        li
+            label(for='navegador') ¿Cual es tu Navegador Web Preferido?
+            .modulo1
+            input(type='radio' name='navegador' value='firefox')
+            p Mozilla Firefox
+            input(type='radio' name='navegador' value='chrome')
+            p Google Chrome  
+            input(type='radio' name='navegador' value='opera')
+            p Opera   
+            span Elige tu Navegador Web Predilecto.
         li
             label(for='bio') Algo que quieras comentarnos?
             textarea(name='bio' onkeyup='adjust_textarea(this)')
