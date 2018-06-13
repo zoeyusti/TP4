@@ -39,11 +39,13 @@
     text-align: center;
 }
 
-.formEncuesta p{
+.formEncuesta p, .formEncuesta option{
     font-size: 14px;
     color: slategrey;
     font-family: Arial, Helvetica, sans-serif;
 }
+
+
 
 .formEncuesta li > label{
     display: block;
