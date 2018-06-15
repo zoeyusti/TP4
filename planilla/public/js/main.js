@@ -35,7 +35,7 @@ function prueba(){
 function cargarTodo(){
 	resultados();
 	cargarResultados();
-	localStorage.clear();
+	//localStorage.clear();
 
 }
 
