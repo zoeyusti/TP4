@@ -38,7 +38,7 @@
     text-align: center;
 }
 
-.formEncuesta p, .formEncuesta option{
+.formEncuesta .boton, .formEncuesta option{
     font-size: 14px;
     color: slategrey;
     font-family: Arial, Helvetica, sans-serif;
@@ -89,10 +89,8 @@
 }
 .formEncuesta textarea{
     resize:none;
-    width: 369px;
-    height: 173px;
-    margin: 5px;
-}
+    width: 378px;
+    height: 75px;
 }
 .formEncuesta input[type="submit"],
 .formEncuesta input[type="button"]{
@@ -115,7 +113,19 @@
     justify-content: space-around;
 }
 
+.boton{
+    margin: 10px;
+}
+
 .tituloEnc{
     display: flex;
     justify-content: center;
+}
+
+.formEncuesta input[type="text"], #idComboBox{
+    margin: 7px 0;
+}
+
+.formEncuesta input[type="radio"]{
+    margin:0 8px 0 3px;
 }
