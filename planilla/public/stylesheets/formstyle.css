@@ -4,7 +4,6 @@
     
 }
 
-
 .formEncuesta{
     max-width:400px;
     margin:50px auto;
@@ -45,7 +44,9 @@
     font-family: Arial, Helvetica, sans-serif;
 }
 
-
+.formEncuesta input{
+    width: 365px;
+}
 
 .formEncuesta li > label{
     display: block;
@@ -108,12 +109,19 @@
 
 .modulo1{
     display: flex;
-    justify-content: center;
-    justify-content: space-around;
+    
+    
+
 }
 
 .boton{
     margin: 10px;
+    display: flex;
+    justify-content: center;
+    
+}
+.boton input{
+    width: 16px;
 }
 
 .tituloEnc{
@@ -129,6 +137,7 @@
     margin:0 8px 0 3px;
 }
 
+
 #resultados{
     width: 600px;
     margin: 20px auto;
@@ -139,5 +148,4 @@
     padding: 10px;
     border-style: solid;
     border-color: grey;
-    
 }
