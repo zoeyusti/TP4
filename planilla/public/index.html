@@ -8,7 +8,7 @@
     <link rel="stylesheet" type="text/css" href="stylesheets/formstyle.css">
 </head>
 <body>
-    <form name="formEncuesta" class="formEncuesta">
+    <form name="formEncuesta" class="formEncuesta" id="formEncuesta">
         <ul>
         <li>
             <label for="name">Nombre</label>
@@ -18,6 +18,7 @@
         <li>
             <label for="pais">Pais de Residencia</label>
             <select id="idComboBox" name="comboBox">
+            	<option value="">Elija una opción</option>
                <!--  <option value="">1</option>
                 <option value="">2</option>
                 <option value="">3</option>
@@ -32,7 +33,7 @@
             <label for="lenguaje">¿Cual es tu lenguaje Preferido?</label>
             <div class="modulo1">
                 <div class="boton">
-                    <input type="radio" name="lenguaje" value="js"><p>JavaScript</p>
+                    <input type="radio" name="lenguaje" value="JavaScript"><p>JavaScript</p>
                 </div>
                 <div class="boton">
                     <input type="radio" name="lenguaje" value="JAVA"><p>JAVA</p>
@@ -47,13 +48,13 @@
             <label for="SO">¿Cual es tu Sistema Operativo Preferido?</label>
             <div class="modulo1">
                 <div class="boton">
-                    <input type="radio" name="SO" value="w2"><p>Windows  </p>
+                    <input type="radio" name="SO" value="Windows"><p>Windows  </p>
                 </div>
                 <div class="boton">
-                    <input type="radio" name="SO" value="lx"><p>Linux  </p>
+                    <input type="radio" name="SO" value="Linux"><p>Linux  </p>
                 </div>
                 <div class="boton">
-                    <input type="radio" name="SO" value="so"><p>Solaris  </p>
+                    <input type="radio" name="SO" value="Solaris"><p>Solaris  </p>
                 </div>
             </div>
             <span>Elige Sistema Operativo Predilecto.</span>
@@ -62,13 +63,13 @@
         	<label for="editor">¿Cuál es tu editor de texto preferido?</label>
         	<div class="modulo1">
                 <div class="boton">
-        		  <input type="radio" name="editor" value="sublime"><p>Sublime text</p>
+        		  <input type="radio" name="editor" value="Sublime"><p>Sublime text</p>
                 </div>
                 <div class="boton">
-        		  <input type="radio" name="editor" value="notepad"><p>Notepad++</p>
+        		  <input type="radio" name="editor" value="Notepad"><p>Notepad++</p>
                 </div>
                 <div class="boton">
-        		  <input type="radio" name="editor" value="atom"><p>Atom</p>
+        		  <input type="radio" name="editor" value="Atom"><p>Atom</p>
                 </div>
         	</div>
         	<span>Elige tu editor de texto</span>
@@ -77,13 +78,13 @@
         	<label for="navegador">¿Cuál es tu navegador web preferido?</label>
         	<div class="modulo1">
                 <div class="boton">
-        		  <input type="radio" name="navegador" value="firefox"><p>Mozilla Firefox</p>
+        		  <input type="radio" name="navegador" value="Firefox"><p>Mozilla Firefox</p>
                 </div>
                 <div class="boton">
-        		  <input type="radio" name="navegador" value="chrome"><p>Google Chrome</p>
+        		  <input type="radio" name="navegador" value="Chrome"><p>Google Chrome</p>
                 </div>
                 <div class="boton">
-        		  <input type="radio" name="navegador" value="opera"><p>Opera</p>
+        		  <input type="radio" name="navegador" value="Opera"><p>Opera</p>
                 </div>
         	</div>
         	<span>Elige tu navegador web predilecto</span>
@@ -102,11 +103,17 @@
 
        <!--  <ul id="resultados"><li>ljnfvlkfvk</li></ul> -->
         </form>
-
-        <table id="resultados">
+		<form class="formEncuesta">
+        	<table id="resultados">
+        		<tr>
+        			<td><h3>Lenguaje</h3></td>
+        			<td><h3>Sistema</h3></td>
+        			<td><h3>Editor</h3></td>
+        			<td><h3>Navegador</h3></td>
+        		</tr>
             
-        </table>
-
+        	</table>
+		</form>
         
         
 

@@ -1,9 +1,9 @@
 
-$(document).ready(function(){
+//$(document).ready(function(){
 
 	$.ajax({
-		method: "GET",
-	    url: "http://localhost:3000/paises",
+		//method: "GET",
+	    url: "/paises",
 	    dataType: "json",
 	}).done(function(data) {
 	    data.paises.forEach(function(e) {
@@ -12,18 +12,29 @@ $(document).ready(function(){
 	    });
 	});
 
-});
+//});
 
 
 var infoVotantes = {};
 var Votantes = [];
 var datos = localStorage.getItem('Votantes');
 
-document.getElementById('enviar').addEventListener("click", resultados);
+document.getElementById('enviar').addEventListener("click", cargarTodo);
+
+
+//Cuando el preventDefault hace que llores
+$("#formEncuesta").submit(function(e){
+	e.preventDefault();
+});
+
+function prueba(){
+	console.log("DIME QUE FUNCIONAS PLS");
+}
 
 function cargarTodo(){
 	resultados();
 	cargarResultados();
+	//localStorage.clear();
 
 }
 
@@ -40,29 +51,34 @@ function resultados(){
     var navegadores = $("input:checked[name='navegador']").val();
     console.log(navegadores);
 
-    //guardamos la info
+    if (lenguajes==undefined||sistOp==undefined||editores==undefined||navegadores==undefined) {
+    	alert("FALTAN DATOS");
+    }else{
 
-    infoVotantes = {lenguaje: lenguajes, sistema: sistOp, editor: editores, navegador: navegadores}
-	console.log(infoVotantes);
+	    //guardamos la info
 
-	if (datos==null) {
-		Votantes = [];
-	}else{
-		Votantes = JSON.parse(datos).Votantes;
+	    infoVotantes = {lenguaje: lenguajes, sistema: sistOp, editor: editores, navegador: navegadores}
+		console.log(infoVotantes);
+
+		if (datos==null) {
+			Votantes = [];
+		}else{
+			Votantes = JSON.parse(datos).Votantes;
+		}
+		console.log(datos);
+		Votantes.push(infoVotantes);
+
+		let guardando = {'Votantes': Votantes, 'total': Votantes.length}
+		console.log(guardando);
+
+		let info = JSON.stringify(guardando);
+
+		localStorage.setItem('Votantes', info);
+
+		console.log(Votantes);
+
+		//cargarResultados();
 	}
-	console.log(datos);
-	Votantes.push(infoVotantes);
-
-	let guardando = {'Votantes': Votantes, 'total': Votantes.length}
-	console.log(guardando);
-
-	let info = JSON.stringify(guardando);
-
-	localStorage.setItem('Votantes', info);
-
-	console.log(Votantes);
-
-	cargarResultados();
 
 }
 

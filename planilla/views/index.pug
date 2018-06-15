@@ -12,12 +12,13 @@ block content
       li
         label(for='pais') Pais de Residencia
         select#idComboBox(name='comboBox')
+            option(value='') Elija una opción
         span Elige tu Pais
       li
         label(for='lenguaje') &iquest;Cual es tu lenguaje Preferido?
         .modulo1
           .boton
-            input(type='radio' name='lenguaje' value='js')
+            input(type='radio' name='lenguaje' value='JavaScript')
             p JavaScript
           .boton
             input(type='radio' name='lenguaje' value='JAVA')
@@ -30,39 +31,39 @@ block content
         label(for='SO') &iquest;Cual es tu Sistema Operativo Preferido?
         .modulo1
           .boton
-            input(type='radio' name='SO' value='w2')
+            input(type='radio' name='SO' value='Windows')
             p Windows  
           .boton
-            input(type='radio' name='SO' value='lx')
+            input(type='radio' name='SO' value='Linux')
             p Linux  
           .boton
-            input(type='radio' name='SO' value='so')
+            input(type='radio' name='SO' value='Solaris')
             p Solaris  
         span Elige Sistema Operativo Predilecto.
       li
         label(for='editor') &iquest;Cu&aacute;l es tu editor de texto preferido?
         .modulo1
           .boton
-            input(type='radio' name='editor' value='sublime')
+            input(type='radio' name='editor' value='Sublime')
             p Sublime text
           .boton
-            input(type='radio' name='editor' value='notepad')
+            input(type='radio' name='editor' value='Notepad')
             p Notepad++
           .boton
-            input(type='radio' name='editor' value='atom')
+            input(type='radio' name='editor' value='Atom')
             p Atom
         span Elige tu editor de texto
       li
         label(for='navegador') &iquest;Cu&aacute;l es tu navegador web preferido?
         .modulo1
           .boton
-            input(type='radio' name='navegador' value='firefox')
+            input(type='radio' name='navegador' value='Firefox')
             p Mozilla Firefox
           .boton
-            input(type='radio' name='navegador' value='chrome')
+            input(type='radio' name='navegador' value='Chrome')
             p Google Chrome
           .boton
-            input(type='radio' name='navegador' value='opera')
+            input(type='radio' name='navegador' value='Opera')
             p Opera
         span Elige tu navegador web predilecto
       li

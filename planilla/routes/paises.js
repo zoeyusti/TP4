@@ -13,7 +13,6 @@ var paises = {
 ]
 }
 
-//cuando se hace una llamada ajax a /paises, devuelve el objeto de arriba en formato JSON
 router.get('/', function(req, res, next) {
   res.send(JSON.stringify(paises));
 });
