@@ -1,82 +1,76 @@
 extends layout
 
 block content
-    .tituloEnc
-        h1 Encuesta de tecnología
-
-    form.formEncuesta
-        ul
-        li
-            label(for='name') Nombre
-            input(type='text' name='name' maxlength='25')
-            span Escribe tu nombre
-        li
-            label(for='pais') Pais de Residencia
-            select#idComboBox(name='comboBox')
-                option(value='') 1
-                option(value='') 2
-                option(value='') 3
-                option(value='') 4
-                option(value='') 5
-                option(value='') 6
-                option(value='') Other
-            span Elige tu País
-        li
-            label(for='lenguaje') ¿Cuál es tu Lenguaje Preferido?
-            .modulo1
-            .boton
-                input(type='radio' name='lenguaje' value='js')
-                | JavaScript
-            .boton
-                input(type='radio' name='lenguaje' value='JAVA')
-                | JAVA
-            .boton
-                input(type='radio' name='lenguaje' value='CSharp')
-                | C#
-            span Elige tu lenguaje de programacion.
-        li
-            label(for='SO') ¿Cuál es tu Sistema Operativo Preferido?
-            .modulo1
-            .boton
-                input(type='radio' name='SO' value='w2')
-                | Windows  
-            .boton
-                input(type='radio' name='SO' value='lx')
-                | Linux  
-            .boton
-                input(type='radio' name='SO' value='so')
-                | Solaris  
-            span Elige tu Sistema Operativo Predilecto.
-        li
-            label(for='editor') ¿Cual es tu Editor de Texto Preferido?
-            .modulo1
-            .boton
-                input(type='radio' name='editor' value='sublime')
-                | Sublime text
-            .boton
-                input(type='radio' name='editor' value='notepad')
-                | Notepad++  
-            .boton
-                input(type='radio' name='editor' value='atom')
-                | Atom  
-            span Elige tu Editor de Texto.
-        li
-            label(for='navegador') ¿Cual es tu Navegador Web Preferido?
-            .modulo1
-            .boton
-                input(type='radio' name='navegador' value='firefox')
-                | Mozilla Firefox
-            .boton
-                input(type='radio' name='navegador' value='chrome')
-                | Google Chrome  
-            .boton
-                input(type='radio' name='navegador' value='opera')
-                | Opera   
-            span Elige tu Navegador Web Predilecto.
-        li
-            label(for='bio') Algo que quieras comentarnos?
-            textarea(name='bio' onkeyup='adjust_textarea(this)')
-            span Escribe algo bonitoooo~ 
-        li
-            input(type='submit' value='Enviar')
-
+  .tituloEnc
+    h1 Encuesta de tecnologia
+  form.formEncuesta(name='formEncuesta')
+    ul
+      li
+        label(for='name') Nombre
+        input(type='text' name='name' maxlength='25')
+        span Escribe tu nombre
+      li
+        label(for='pais') Pais de Residencia
+        select#idComboBox(name='comboBox')
+        span Elige tu Pais
+      li
+        label(for='lenguaje') &iquest;Cual es tu lenguaje Preferido?
+        .modulo1
+          .boton
+            input(type='radio' name='lenguaje' value='js')
+            p JavaScript
+          .boton
+            input(type='radio' name='lenguaje' value='JAVA')
+            p JAVA
+          .boton
+            input(type='radio' name='lenguaje' value='CSharp')
+            p C#
+        span Elige tu lenguaje de programacion.
+      li
+        label(for='SO') &iquest;Cual es tu Sistema Operativo Preferido?
+        .modulo1
+          .boton
+            input(type='radio' name='SO' value='w2')
+            p Windows  
+          .boton
+            input(type='radio' name='SO' value='lx')
+            p Linux  
+          .boton
+            input(type='radio' name='SO' value='so')
+            p Solaris  
+        span Elige Sistema Operativo Predilecto.
+      li
+        label(for='editor') &iquest;Cu&aacute;l es tu editor de texto preferido?
+        .modulo1
+          .boton
+            input(type='radio' name='editor' value='sublime')
+            p Sublime text
+          .boton
+            input(type='radio' name='editor' value='notepad')
+            p Notepad++
+          .boton
+            input(type='radio' name='editor' value='atom')
+            p Atom
+        span Elige tu editor de texto
+      li
+        label(for='navegador') &iquest;Cu&aacute;l es tu navegador web preferido?
+        .modulo1
+          .boton
+            input(type='radio' name='navegador' value='firefox')
+            p Mozilla Firefox
+          .boton
+            input(type='radio' name='navegador' value='chrome')
+            p Google Chrome
+          .boton
+            input(type='radio' name='navegador' value='opera')
+            p Opera
+        span Elige tu navegador web predilecto
+      li
+        label(for='bio') Algo que quieras comentarnos?
+        textarea(name='bio' onkeyup='adjust_textarea(this)')
+        span Escribe algo bonitoooo~ 
+      li
+        input#enviar(type='submit' value='Enviar')
+  table#resultados
+  script(type='text/javascript' src='js/jquery.js')
+  script(type='text/javascript' src='js/main.js')
