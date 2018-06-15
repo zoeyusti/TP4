@@ -1,18 +1,19 @@
 
-//$(document).ready(function(){
+$(document).ready(function(){
 
 	$.ajax({
 		//method: "GET",
 	    url: "/paises",
 	    dataType: "json",
 	}).done(function(data) {
+		console.log(data.paises)
 	    data.paises.forEach(function(e) {
 	        let option = `<option value="${e.nombre}">${e.nombre}</option>`
-	        $("#idComboBox").append(option);
+	        $("#paises").append(option);
 	    });
 	});
 
-//});
+});
 
 
 var infoVotantes = {};
@@ -34,14 +35,14 @@ function prueba(){
 function cargarTodo(){
 	resultados();
 	cargarResultados();
-	//localStorage.clear();
+	localStorage.clear();
 
 }
 
 function resultados(){
 
- 	//var paises = $("#pais").val();
-	//console.log(paises);
+ 	var paises = $("#paises option:selected").val();
+	console.log(paises);
     var lenguajes = $("input:checked[name='lenguaje']").val();
     console.log(lenguajes);
     var sistOp = $("input:checked[name='SO']").val();
@@ -51,13 +52,13 @@ function resultados(){
     var navegadores = $("input:checked[name='navegador']").val();
     console.log(navegadores);
 
-    if (lenguajes==undefined||sistOp==undefined||editores==undefined||navegadores==undefined) {
+    if (paises==undefined||lenguajes==undefined||sistOp==undefined||editores==undefined||navegadores==undefined) {
     	alert("FALTAN DATOS");
     }else{
 
 	    //guardamos la info
 
-	    infoVotantes = {lenguaje: lenguajes, sistema: sistOp, editor: editores, navegador: navegadores}
+	    infoVotantes = {pais: paises, lenguaje: lenguajes, sistema: sistOp, editor: editores, navegador: navegadores}
 		console.log(infoVotantes);
 
 		if (datos==null) {
@@ -87,6 +88,7 @@ function cargarResultados(){
 		for (var i = 0; i < Votantes.length; i++) {
 			//let votosEntrantes = `<li> ${Votantes[i].lenguaje} ${Votantes[i].sistema} ${Votantes[i].editor} ${Votantes[i].navegador} </li>`
 			let votosEntrantes = `<tr>
+									<td>${Votantes[i].pais}</td>
 									<td>${Votantes[i].lenguaje}</td>
 									<td>${Votantes[i].sistema}</td>
 									<td>${Votantes[i].editor}</td>
